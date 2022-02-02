@@ -41,3 +41,10 @@ function App() {
 }
 
 export default App;
+
+export async function getStaticProps(context) {
+  l('i am in getStaticProps')
+  return {
+    props: {}, // will be passed to the page component as props
+  }
+}

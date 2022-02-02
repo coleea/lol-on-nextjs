@@ -28,7 +28,7 @@ export default function UserMain() {
                     const winRatio          = (rankType.wins / totalMatchCount * 100).toFixed(0) + '%'
 
                     return (
-                            <div className={matchTypeName === matchTypeNames.solo ? 
+                            <div key={i} className={matchTypeName === matchTypeNames.solo ? 
                                                                                 css.solRankInfo 
                                                                               : css._5on5RankInfo}>
                                 <div className={css.tierRank}>

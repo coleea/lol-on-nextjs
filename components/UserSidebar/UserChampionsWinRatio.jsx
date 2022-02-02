@@ -32,12 +32,16 @@ export default function UserMain({}) {
                             {viewtype === viewTypes.general && 
                                 winRatioFreeSeason && 
                                 winRatioFreeSeason.map((matchInfos,matchInfosIdx)=> 
-                                    <ChampionWinRate matchInfos={matchInfos} matchInfosIdx={matchInfosIdx} />
+                                    <div key={matchInfosIdx}>
+                                        <ChampionWinRate matchInfos={matchInfos} matchInfosIdx={matchInfosIdx} />
+                                    </div>
                                 )
                             }
                             {viewtype === viewTypes._7days && 
                                 winRatio7Days.map((matchInfos,matchInfosIdx)=> 
-                                    <_7daysWinRate matchInfos={matchInfos} matchInfosIdx={matchInfosIdx} />
+                                    <div key={matchInfosIdx}>
+                                        <_7daysWinRate matchInfos={matchInfos} matchInfosIdx={matchInfosIdx} />
+                                    </div>
                                 )
                             }
                         </div>             
