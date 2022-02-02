@@ -16,9 +16,9 @@ const URL_BASE_FOR_AUTOCOMPLETE   = `https://raw.githubusercontent.com/coleea/lo
 
 export default function Header() {
 
-    const [queryHistory, setQueryHistory]    = useState(JSON.parse((typeof window !== 'undefined') ?  localStorage.queryHistory || '[]' : '[]'))
-    const [favoriteUsers, setFavoriteUsers]  = useState(JSON.parse((typeof window !== 'undefined') ?  localStorage.favoriteUsers || '[]' : '[]'))
-    const [isInputExists, setIsInputExists]  = useState(false)
+    const [queryHistory, setQueryHistory]                = useState(JSON.parse((typeof window !== 'undefined') ?  localStorage.queryHistory || '[]' : '[]'))
+    const [favoriteUsers, setFavoriteUsers]              = useState(JSON.parse((typeof window !== 'undefined') ?  localStorage.favoriteUsers || '[]' : '[]'))
+    const [isInputExists, setIsInputExists]              = useState(false)
     const [isSearchbarFocused, setIsSearchbarFocused]    = useState(false)
     const [historyViewType, setHistoryViewType]          = useState('latestSearch')
     const [autocompleteEntries , setAutocompleteEntries] = useState([])
@@ -28,12 +28,12 @@ export default function Header() {
     const isSearchHistoryAreaClicked = useRef(false)
 
     const [basicInfo, setBasicInfo]  = useRecoilState(basicInfoAtom)
-    const [mostInfo, setMostInfo]  = useRecoilState(mostInfoAtom)
-    const [matches, setMatches]  = useRecoilState(matchesAtom)
+    const [mostInfo, setMostInfo]    = useRecoilState(mostInfoAtom)
+    const [matches, setMatches]      = useRecoilState(matchesAtom)
 
-    const [userHeaderInfo, setUserHeaderInfo]  = useRecoilState(userHeaderInfoAtom)
-    const [userSidebarInfo, setUserSidebarInfo]  = useRecoilState(userSidebarInfoAtom)
-    const [latest20SummaryInfo, setLatest20SummaryInfo]  = useRecoilState(latest20SummaryInfoAtom)
+    const [userHeaderInfo, setUserHeaderInfo]                    = useRecoilState(userHeaderInfoAtom)
+    const [userSidebarInfo, setUserSidebarInfo]                 = useRecoilState(userSidebarInfoAtom)
+    const [latest20SummaryInfo, setLatest20SummaryInfo]          = useRecoilState(latest20SummaryInfoAtom)
     const [matchHistoryDetailInfo, setMatchHistoryDetailInfo]  = useRecoilState(matchHistoryDetailInfoAtom)    
 
     useEffect(() => {
@@ -42,11 +42,11 @@ export default function Header() {
         const username = urlParams.get('user')
         
         if(username){
-            getDataAndSetState(username) 
-            const queryHistoryArrRenewed = saveQueryToDB(username)
-            setQueryHistory(queryHistoryArrRenewed)
+            // getDataAndSetState(username) 
+            // const queryHistoryArrRenewed = saveQueryToDB(username)
+            // setQueryHistory(queryHistoryArrRenewed)
         } else {
-            getDataAndSetState(INITIAL_USER_QUERY)
+            // getDataAndSetState(INITIAL_USER_QUERY)
         }
 
     }, [])
