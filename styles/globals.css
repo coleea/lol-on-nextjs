@@ -2,8 +2,6 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 a {
@@ -13,4 +11,17 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+body {
+  font-family: 'Helvetica', Sans-Serif; 
+  background-color: #eaeaea;
+  font-size: 12px;
+  margin : 0 ;    
+}
+
+ul, li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }

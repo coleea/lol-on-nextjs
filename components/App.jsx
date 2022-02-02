@@ -1,21 +1,21 @@
 import { useEffect,  } from 'react';
 import { RecoilRoot } from 'recoil';
-import css from '../components/App.module.scss';
-import Header from '../components/Header.jsx';
-import UserHeader from '../components/UserHeader.jsx';
-import UserMain from '../components/UserMain.jsx';
-import UserSidebar from '../components/UserSidebar.jsx';
+import css from './App.module.scss';
+import Header from './Header.jsx';
+import UserHeader from './UserHeader.jsx';
+import UserMain from './UserMain.jsx';
+import UserSidebar from './UserSidebar.jsx';
 
 const l = console.log 
 
 function App() {
   
   const initLocalStorage = _ => {
-
+    
     if (typeof window !== 'undefined') {
-        localStorage.queryHistory = localStorage.queryHistory || '[]' 
+        localStorage.queryHistory = localStorage.queryHistory || '[]'
         localStorage.favoriteUsers = localStorage.favoriteUsers || '[]'
-    }    
+    }
   }
   
   useEffect(() => {
